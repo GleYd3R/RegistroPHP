@@ -118,3 +118,11 @@ h1 {
   left: 73%;
   cursor: pointer;
 }
+
+footer {    
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background-color: rgb(11, 238, 49);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.103);
+}

@@ -57,5 +57,13 @@
     mysqli_close($conexionsql);
     ?>
 </body>
-
+<footer>
+    <p>
+    <h2>Analisis y desarrollo de software</h2>
+    </p>
+    <p>
+        <h2>Gleyder Barrios Hernandez</h2></p>
+    <p>
+        <h2>Todos los derechos reservados</h2></p>
+</footer>
 </html>
