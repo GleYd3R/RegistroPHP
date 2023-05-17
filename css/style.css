@@ -119,10 +119,13 @@ h1 {
   cursor: pointer;
 }
 
-footer {    
+footer {
+  position: fixed;
+  transform: translate(50%);
   text-align: center;
-  width: 100%;
+  width: 50%;
+  border-radius: 25px;
   height: auto;
-  background-color: rgb(11, 238, 49);
+  background-color: #2da136;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.103);
 }
