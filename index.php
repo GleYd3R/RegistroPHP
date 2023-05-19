@@ -16,12 +16,26 @@
 
 <body>
     <?php
+    if (isset($_POST['btnbuscar'])) {
+        $buscar = $_POST['txtbuscar'];
+
+        $busqueda = mysqli_query($conexionsql, "SELECT id,nombres,apellidos,ficha FROM aprendiz 
+      where pro.cat=cate.catcod and des = '" . $buscar . "'");
+    }
     include("php/conexionsql.php");
     $sql = "SELECT * FROM aprendiz";
     $resultado = mysqli_query($conexionsql, $sql);
     ?>
     <h1>Lista de Aprendices</h1>
-    <a href="php/registrar.php" class="registrar">Nuevo aprendiz</a><br><br>
+    <div>
+        <form method="POST">
+            <th colspan="4">
+                <input type="submit" value="&#128270; Buscar" name="btnbuscar">
+                <input type="text" name="txtbuscar" id="cajabuscar" placeholder="Ingresar producto" autocomplete="off">
+            </th>
+        </form>
+    </div>
+    <a href="php/registrar.php" class="registrar">&#10010;Nuevo aprendiz</a><br><br>
     <table>
         <thead>
             <tr>
@@ -42,8 +56,9 @@
                     <td><?php echo $filas['nombres'] ?></td>
                     <td><?php echo $filas['apellidos'] ?></td>
                     <td><?php echo $filas['ficha'] ?></td>
+                    <td><?php echo $filas['ficha'] ?></td>
                     <td>
-                        <?php echo "<a href='php/editar.php?id=" . $filas['id'] . "'>Editar</a>"; ?>                        
+                        <?php echo "<a href='php/editar.php?id=" . $filas['id'] . "'>Editar</a>"; ?>
                         <?php echo "<a href='php/eliminar.php?id=" . $filas['id'] . "' 
                         onclick='return confirmar()'>Eliminar</a>"; ?>
                     </td>
@@ -62,8 +77,11 @@
     <h2>Analisis y desarrollo de software</h2>
     </p>
     <p>
-        <h2>Gleyder Barrios Hernandez</h2></p>
+    <h2>Gleyder Barrios Hernandez</h2>
+    </p>
     <p>
-        <h2>Todos los derechos reservados</h2></p>
+    <h2>Todos los derechos reservados</h2>
+    </p>
 </footer>
+
 </html>
