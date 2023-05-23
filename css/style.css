@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgb(207, 207, 207);
+  background-color: rgb(158, 158, 158);
 }
 
 form {
@@ -113,14 +113,18 @@ h1 {
 }
 
 .registrar {
-  position: relative;
-  left: 76%;
+  position: relative; 
+  left: 68%;
   cursor: pointer;
 }
 
+.buscar{ 
+  cursor: pointer;
+}
+
+
 footer {  
-  justify-content: space-around;  
-  display: flex;  
-  border-radius: 25px;  
-  background-color: #2da136;  
+  text-align: center;
+  background-color: #2da136;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.103);
 }
